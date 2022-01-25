@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Day001.iml" filepath="$PROJECT_DIR$/.idea/Day001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/0.Base/assignment1/assignment1.iml" filepath="$PROJECT_DIR$/0.Base/assignment1/assignment1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1.SOLID Principles/assignment1 (1).iml" filepath="$PROJECT_DIR$/1.SOLID Principles/assignment1 (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/2.MultiModuleProject/assignment1 (2).iml" filepath="$PROJECT_DIR$/2.MultiModuleProject/assignment1 (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/2.Annotations + Surefire Report/assignment1.2.iml" filepath="$PROJECT_DIR$/2.Annotations + Surefire Report/assignment1.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3. MulitModule Project +Pom/assignment1/application/multi-module-application.iml" filepath="$PROJECT_DIR$/3. MulitModule Project +Pom/assignment1/application/multi-module-application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3. MulitModule Project +Pom/assignment1/library/multi-module-library.iml" filepath="$PROJECT_DIR$/3. MulitModule Project +Pom/assignment1/library/multi-module-library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3. MulitModule Project +Pom/assignment1/multi-module-sample.iml" filepath="$PROJECT_DIR$/3. MulitModule Project +Pom/assignment1/multi-module-sample.iml" />
+    </modules>
+  </component>
+</project>
