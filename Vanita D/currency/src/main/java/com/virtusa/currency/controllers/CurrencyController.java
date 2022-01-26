@@ -1,7 +1,9 @@
 package com.virtusa.currency.controllers;
 
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,8 +15,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.bohnman.squiggly.Squiggly;
+import com.github.bohnman.squiggly.util.SquigglyUtils;
 import com.virtusa.currency.models.Currency;
 import com.virtusa.currency.services.CurrencyService;
 
@@ -27,7 +33,7 @@ public class CurrencyController {
 ///post
 	@PostMapping(value="/",params = "version=1.0")
 	public ResponseEntity<?> addCurrency(@RequestBody Currency currency){
-		Currency currencyObj=this.cService.addBank(currency);
+		Currency currencyObj=this.cService.addCurrency(currency);
 		if(currencyObj!=null)
 			return ResponseEntity.status(HttpStatus.ACCEPTED).body(currencyObj);
 		else
@@ -78,7 +84,20 @@ public class CurrencyController {
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Currency Not Found");
 		
 	}
+	//get currency by fields
+	@GetMapping(value="/fields/{currencyId}",params= "version=1.0")
+	public ResponseEntity<?> getCurrencyByFields(@PathVariable("currencyId") Long currencyId, @RequestParam("feilds") String feilds){
+		Map<Object, Object> model = new HashMap<>();
+		Currency currency = this.cService.getCurrencyById(currencyId);
+		if(currency != null) {
+			ObjectMapper mapper = Squiggly.init(new ObjectMapper(), feilds);
+			return ResponseEntity.ok(SquigglyUtils.stringify(mapper, currency));
+		} else {
+			return ResponseEntity.ok(model.put("message", "currency not found"));
+		}
 	}
+	
+}
 	//somenotes to parse image- Type- MultipartFile file
 	//String uploadDirectory = request.getServletContext().getRealPath(uploadFolder);
 	//String uploadDirectory = System.getProperty("user.dir") + uploadFolder;

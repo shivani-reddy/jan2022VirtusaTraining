@@ -16,7 +16,7 @@ public class CurrencyService {
 	
 	//insert 
 	
-		public Currency addBank(Currency currency) {
+		public Currency addCurrency(Currency currency) {
 			return this.currencyRepo.save(currency);
 		}
 		

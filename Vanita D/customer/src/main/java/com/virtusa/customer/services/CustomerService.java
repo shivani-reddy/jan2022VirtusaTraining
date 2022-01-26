@@ -20,13 +20,13 @@ public class CustomerService {
 		return this.cRepo.save(customer);
 	}
 	
-	//list all the banks
+	//list all the customer
 	
 	public List<Customer> getAllCustomers(){
 		return this.cRepo.findAll();
 	}
 	
-	//list bank by Id
+	//list customer by Id
 	
 	public Customer getCustomerById(long customerId) {
 		return this.cRepo.findById(customerId).orElse(null);

@@ -3,12 +3,13 @@ package com.virtusa.calender.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.virtusa.calender.models.Calender;
 import com.virtusa.calender.repositories.CalenderRepository;
 
 
-
+@Service
 public class CalenderService {
 	@Autowired
 	private CalenderRepository cRepo;

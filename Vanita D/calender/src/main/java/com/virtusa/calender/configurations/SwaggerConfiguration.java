@@ -46,7 +46,7 @@ public class SwaggerConfiguration {
    
     private ApiInfo getApiInfo() {
         return new ApiInfo(
-                "Customer API",
+                "Calender API",
                 "App to demonstrate API Documentation",
                 "0.0.1-SNAPSHOT",
                 "Terms of Service",

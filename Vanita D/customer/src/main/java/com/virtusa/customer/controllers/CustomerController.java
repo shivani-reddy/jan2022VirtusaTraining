@@ -1,6 +1,8 @@
 package com.virtusa.customer.controllers;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,8 +14,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.bohnman.squiggly.Squiggly;
+import com.github.bohnman.squiggly.util.SquigglyUtils;
 import com.virtusa.customer.models.Customer;
 import com.virtusa.customer.services.CustomerService;
 
@@ -72,6 +78,18 @@ public class CustomerController {
 		else
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Customer Not Found");
 		
+	}
+	
+	@GetMapping(value ="/filters/{customerId}", params="version=1.0")
+	public ResponseEntity<?> getCustomerByFields(@PathVariable("customerId") Long customerId, @RequestParam(name = "fields" , required = false) String fields){
+		Map<Object, Object> model = new HashMap<>();
+		Customer customer = this.cService.getCustomerById(customerId);
+		if ( customer != null ) {
+			ObjectMapper mapper = Squiggly.init(new ObjectMapper(), fields);
+			return ResponseEntity.ok(SquigglyUtils.stringify(mapper, customer));
+		} else {
+			return ResponseEntity.ok(model.put("Message", "customer  not found"));
+		}
 	}
 		
 }
