@@ -17,6 +17,9 @@ import javax.persistence.Table;
 
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
+
+import com.virtusa.customerapi.models.Bank;
+
 import lombok.Data;
 
 
@@ -40,7 +43,9 @@ public class Customer {
 		private LocalDate dob;
 		@Column(name="Address",length = 150,nullable = false)
 		private String address;
-		
+		@ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+		@JoinColumn(foreignKey = @ForeignKey(name = "Bank_Id"), name = "Bank_Id" )
+		private Bank bank;
 
 	}
 
