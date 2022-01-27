@@ -28,7 +28,7 @@ public class Trader {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="Trader_Id")
-	  @ApiModelProperty(hidden = true)
+	@ApiModelProperty(hidden = true)
 	private long traderId;
 	@Embedded
 	//value object

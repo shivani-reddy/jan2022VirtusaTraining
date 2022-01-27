@@ -29,7 +29,7 @@ public class CurrencyService {
     }
 
     //delete
-    public boolean deleteCurrency(long currencyId) {
+    public boolean deleteCurrencyById(long currencyId) {
         boolean status = false;
         this.currencyRepo.deleteById(currencyId);
         if(this.getCurrencyById(currencyId)==null) {

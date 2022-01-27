@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.virtusa</groupId>
-	<artifactId>currencyapi</artifactId>
+	<artifactId>calendarapi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>currencyapi</name>
+	<name>calendarapi</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>1.8</java.version>

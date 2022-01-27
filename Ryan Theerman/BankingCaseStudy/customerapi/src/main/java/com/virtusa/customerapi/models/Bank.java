@@ -1,5 +1,6 @@
 package com.virtusa.customerapi.models;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -11,6 +12,7 @@ public class Bank {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @ApiModelProperty(hidden = true)
     @Column(name="Bank_Id")
     private long bankId;
     @Column(name="Bank_Name",length = 50,nullable = false)
