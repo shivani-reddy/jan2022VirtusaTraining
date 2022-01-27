@@ -1,0 +1,6 @@
+com\virtusa\currencyapi\configurations\SwaggerConfiguration.class
+com\virtusa\currencyapi\repositories\CurrencyRepo.class
+com\virtusa\currencyapi\controllers\CurrencyController.class
+com\virtusa\currencyapi\models\Currency.class
+com\virtusa\currencyapi\CurrencyapiApplication.class
+com\virtusa\currencyapi\service\CurrencyService.class
