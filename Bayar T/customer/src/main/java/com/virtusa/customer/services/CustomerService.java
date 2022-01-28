@@ -34,10 +34,10 @@ public class CustomerService {
 		return status;
 	}
 	
-	public Customer updateCustomer(long customerId) {
+	public Customer updateCustomer(long customerId, String customerName) {
 		Customer customer = this.getCustomerById(customerId);
 		if(customer != null) {
-			customer.setCustomerId(customerId);
+			customer.setName(customerName);
 		}
 		return this.customerRepo.save(customer);
 
