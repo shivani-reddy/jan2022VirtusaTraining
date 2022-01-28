@@ -11,15 +11,21 @@ import javax.persistence.Table;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity
 @Table(name = "Customer")
+@AllArgsConstructor
+@NoArgsConstructor
 public class Customer {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@ApiModelProperty(hidden = true)
 	@Column(name = "Customer_Id")
 	private long customerId;
 	
@@ -32,8 +38,8 @@ public class Customer {
 	@Column(name = "Email")
 	private String email;
 	
-	@DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+	//@DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	@Column(name = "Dob")
-	private LocalDate dob;
+	private String dob;
 
 }

@@ -46,9 +46,9 @@ public class CustomerController {
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Customer does not exist");
 	}
 	
-	@PutMapping(value="/{customerId}",params = "version=1.0")
-	public ResponseEntity<?> updateCustomer(@PathVariable("customerId") long customerId){
-		Customer customerObj=this.customerService.updateCustomer(customerId);
+	@PutMapping(value="/{customerId}/{name}",params = "version=1.0")
+	public ResponseEntity<?> updateCustomer(@PathVariable("customerId") long customerId, @PathVariable("name") String name){
+		Customer customerObj=this.customerService.updateCustomer(customerId, name);
 		if(customerObj!=null)
 			return ResponseEntity.status(HttpStatus.ACCEPTED).body(customerObj);
 		else
