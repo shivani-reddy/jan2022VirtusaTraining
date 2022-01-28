@@ -35,10 +35,10 @@ public class CalendarService {
 		return status;
 	}
 	
-	public Calendar updateHoliday(long holidayId) {
+	public Calendar updateHoliday(long holidayId, String event) {
 		Calendar calendar = this.getHolidayById(holidayId);
 		if(calendar != null) {
-			calendar.setHolidayId(holidayId);
+			calendar.setEvent(event);
 		}
 		return this.calendarRepo.save(calendar);
 	}

@@ -1,0 +1,41 @@
+schema {
+	query: Query
+	mutation: Mutation
+}
+
+type Trader {
+
+ traderId: ID!
+ name: FullName
+ tradingLimit: Long
+ dob: String
+ email: String
+ bank:Bank
+
+}
+
+type FullName {
+
+firstName: String
+lastName: String
+middleName: String
+
+}
+
+input TraderInput {
+	name: FullName
+	tradingLimit: Long
+	dob: String
+	email: String
+	bank: Bank
+}
+
+extend type Query {
+	findAllTraders:[Trader]
+	findTrader(traderId: ID):Trader
+}
+
+extend type Mutation {
+	createTrader(traderInput:TraderInput):Trader
+		updateBank(bankId:ID):List<Trader>
+}
