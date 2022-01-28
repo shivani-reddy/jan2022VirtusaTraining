@@ -38,18 +38,18 @@ public class CurrencyController {
 		return this.currencyService.getAllCurrency();
 	}
 	
-	@GetMapping(value="/{customerId}", params = "version=1.0")
-	public ResponseEntity<?> getCurrencyById(@PathVariable("currencyId") long currencyId) {
-		Currency currencyObj = this.currencyService.getCurrencyById(currencyId);
+	@GetMapping(value="/{currencyCode}", params = "version=1.0")
+	public ResponseEntity<?> getCurrencyById(@PathVariable("currencyCode") long currencyCode) {
+		Currency currencyObj = this.currencyService.getCurrencyById(currencyCode);
 		if(currencyObj != null)
 			return  ResponseEntity.status(HttpStatus.ACCEPTED).body(currencyObj);
 		else
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Currency does not exist");
 	}
 	
-	@PutMapping(value="/{currencyId}",params = "version=1.0")
-	public ResponseEntity<?> updateCurrency(@PathVariable("currencyId") long currencyId){
-		Currency currencyObj=this.currencyService.updateCurrency(currencyId);
+	@PutMapping(value="/{currencyCode}/{country}",params = "version=1.0")
+	public ResponseEntity<?> updateCurrency(@PathVariable("currencyCode") long currencyCode, @PathVariable("country") String country){
+		Currency currencyObj=this.currencyService.updateCurrency(currencyCode, country);
 		if(currencyObj!=null)
 			return ResponseEntity.status(HttpStatus.ACCEPTED).body(currencyObj);
 		else
@@ -57,10 +57,10 @@ public class CurrencyController {
 		
 	}
 	
-	@DeleteMapping(value="/{currencyId}",params = "version=1.0")
-	public ResponseEntity<?> deleteCurrencyById(@PathVariable("currencyId") long currencyId){
-		if(this.currencyService.deleteCurrencyById(currencyId))
-			return ResponseEntity.status(HttpStatus.ACCEPTED).body("Currency with "+currencyId+"Deleted");
+	@DeleteMapping(value="/{currencyCode}",params = "version=1.0")
+	public ResponseEntity<?> deleteCurrencyById(@PathVariable("currencyCode") long currencyCode){
+		if(this.currencyService.deleteCurrencyById(currencyCode))
+			return ResponseEntity.status(HttpStatus.ACCEPTED).body("Currency with "+currencyCode+"Deleted");
 		else
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Currency Not Found");
 		
