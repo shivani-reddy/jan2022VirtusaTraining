@@ -1,7 +1,7 @@
 package com.virtusa.customerapi.services;
 
-import com.virtusa.customerapi.models.Bank;
 import com.virtusa.customerapi.models.Customer;
+import com.virtusa.customerapi.models.FullName;
 import com.virtusa.customerapi.repositories.CustomerRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,17 +13,9 @@ import java.util.List;
 public class CustomerService {
     @Autowired
     private CustomerRepo customerRepo;
-    @Autowired
-    private BankService bankService;
 
     //insert
-    public Customer addCustomer(long bankId, Customer customer) {
-        Bank bank=this.bankService.getBankById(bankId);
-        if(bank!=null)
-            customer.setBank(bank);
-
-        else
-            customer.setBank(null);
+    public Customer addCustomer(Customer customer) {
         this.customerRepo.save(customer);
         return customer;
     }
@@ -49,20 +41,38 @@ public class CustomerService {
     }
 
     //update
-    public Customer updateCustomer(Customer customer) {
+    public Customer updateCustomer(long customerId,
+                                   FullName customerName,
+                                   String customerAddress,
+                                   String customerCountry,
+                                   String customerZip,
+                                   String customerState,
+                                   String customerPhone,
+                                   String customerEmail,
+                                   String dob) {
+
+        Customer customer=this.getCustomerById(customerId);
+        if(customer!=null) {
+            customer.setCustomerName(customerName);
+            customer.setCustomerAddress(customerAddress);
+            customer.setCustomerCountry(customerCountry);
+            customer.setCustomerZip(customerZip);
+            customer.setCustomerState(customerState);
+            customer.setCustomerPhone(customerPhone);
+            customer.setCustomerEmail(customerEmail);
+            customer.setDob(dob);
+        }
         return this.customerRepo.save(customer);
     }
 
-    public List<Customer> updateBank(long bankId) {
-
-        Bank bank=this.bankService.getBankById(bankId);
-        List<Customer> customerList=this.customerRepo.findByBank(bank);
-
-        for(Customer customer:customerList) {
-            customer.setBank(null);
-            this.customerRepo.save(customer);
+    public Boolean deleteCustomer(Long customerId) {
+        Customer customer=this.getCustomerById(customerId);
+        if(customer!=null) {
+            this.customerRepo.deleteById(customerId);
+            return true;
+        } else {
+            return false;
         }
-
-        return customerList;
     }
+
 }
