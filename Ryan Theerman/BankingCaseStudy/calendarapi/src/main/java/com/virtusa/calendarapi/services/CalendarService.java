@@ -29,17 +29,29 @@ public class CalendarService {
     }
 
     //update
-    public Calendar updateHoliday(Calendar calendar) {
+    public Calendar updateHoliday(long holidayId,
+                                  String event,
+                                  String category,
+                                  String dateHoliday,
+                                  String countryCode) {
+        Calendar calendar=this.getHolidayById(holidayId);
+        if(calendar!=null) {
+            calendar.setEvent(event);
+            calendar.setCategory(category);
+            calendar.setDateHoliday(dateHoliday);
+            calendar.setCountryCode(countryCode);
+        }
         return this.calendarRepo.save(calendar);
     }
 
     //delete
     public boolean deleteHolidayById(long holidayId) {
-        boolean status = false;
-        this.calendarRepo.deleteById(holidayId);
-        if(this.getHolidayById(holidayId)==null) {
-            status = true;
+        Calendar calendar=this.getHolidayById(holidayId);
+        if(calendar!=null) {
+            this.calendarRepo.deleteById(holidayId);
+            return true;
+        } else {
+            return false;
         }
-        return status;
     }
 }
