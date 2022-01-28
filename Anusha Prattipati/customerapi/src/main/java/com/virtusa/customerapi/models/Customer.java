@@ -18,34 +18,34 @@ import javax.persistence.Table;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
 
-import com.virtusa.customerapi.models.Bank;
-
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
 @Data
 @Entity
 @Table(name = "Customer")
+@AllArgsConstructor
+@NoArgsConstructor
 public class Customer {
 
 	   @Id
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		@Column(name="Customer_Id")
 		private long customerId;
-		@Embedded
+	  // @Column(name = "Name",length = 150,nullable = false)
 		//value object
+	   @Embedded
 		private FullName name;
 		
 		@Column(name="Email")
 		private String email;
-		@DateTimeFormat(iso = ISO.DATE)
 		@Column(name="DOB")
-		private LocalDate dob;
+		private String dob;
 		@Column(name="Address",length = 150,nullable = false)
 		private String address;
-		@ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-		@JoinColumn(foreignKey = @ForeignKey(name = "Bank_Id"), name = "Bank_Id" )
-		private Bank bank;
+		
 
 	}
 
