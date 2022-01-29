@@ -1,13 +1,19 @@
 package com.virtusa.customer.models;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Embeddable
-public class FullName {
+@AllArgsConstructor
+@NoArgsConstructor
+public class FullName implements Serializable{
 	
 	@Column(name="First_Name",length = 50,nullable = false)
 	private String firstName;

@@ -1,13 +1,19 @@
 package com.virtusa.customer.models;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Embeddable
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
-public class Address {
+public class Address implements Serializable{
 	
 	@Column(name="Road_Name",length = 50,nullable = false)
 	private String roadName;

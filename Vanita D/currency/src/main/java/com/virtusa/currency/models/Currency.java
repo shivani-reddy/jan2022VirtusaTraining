@@ -2,6 +2,8 @@ package com.virtusa.currency.models;
 
 
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,7 +18,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "Currency")
-public class Currency {
+public class Currency implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@ApiModelProperty(hidden=true)

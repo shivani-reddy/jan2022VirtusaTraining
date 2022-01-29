@@ -102,6 +102,18 @@
 			    <artifactId>squiggly-filter-jackson</artifactId>
 			    <version>1.3.18</version>
 			</dependency>
+			  <!--redis sb 2.3.4 -->
+        <dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-data-redis</artifactId>
+    
+        </dependency>
+    
+    <dependency>
+      <groupId>redis.clients</groupId>
+      <artifactId>jedis</artifactId>
+      
+    </dependency>
 	</dependencies>
 	<repositories>
         <repository>
