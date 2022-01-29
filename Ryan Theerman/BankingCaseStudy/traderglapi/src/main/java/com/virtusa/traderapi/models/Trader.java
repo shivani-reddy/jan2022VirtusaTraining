@@ -1,5 +1,6 @@
 package com.virtusa.traderapi.models;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 import javax.persistence.CascadeType;
@@ -28,7 +29,7 @@ import lombok.Data;
 @Table(name = "Trader")
 @AllArgsConstructor
 @NoArgsConstructor
-public class Trader {
+public class Trader implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="Trader_Id")
@@ -41,11 +42,11 @@ public class Trader {
 	private long tradingLimit;
 	@Column(name="Email")
 	private String email;
-//	@DateTimeFormat(iso = ISO.DATE)
+	@DateTimeFormat(iso = ISO.DATE)
 	@Column(name="DOB")
-	private String dob;
+	private LocalDate dob;
 	@ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-	@JoinColumn(foreignKey = @ForeignKey(name = "Bank_Id"), name = "Bank_Id" )
+	@JoinColumn(foreignKey = @ForeignKey(name = "Bank_Id"), name = "Bank_Id")
 	private Bank bank;
 
 }

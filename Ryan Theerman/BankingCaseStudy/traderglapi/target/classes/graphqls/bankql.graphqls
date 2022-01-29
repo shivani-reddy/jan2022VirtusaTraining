@@ -22,4 +22,5 @@ type Query {
 type Mutation {
 	createBank(bankInput:BankInput):Bank
     updateBank(bankId:ID,address:String):Bank
+    deleteBank(bankId:Long):Boolean
 }

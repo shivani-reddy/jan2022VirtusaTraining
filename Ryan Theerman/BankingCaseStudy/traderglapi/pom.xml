@@ -125,23 +125,32 @@
 			<version>4.7.1</version>
 			<scope>compile</scope>
 		</dependency>
+
+		<!-- redis sb 2.3.4 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+		</dependency>
 		
 	</dependencies>
 	<profiles>
-	<profile>
-	<id>sonar</id>
-	<activation>
-	<activeByDefault>true</activeByDefault>
-
-	</activation>
-	<properties>
-<!-- Optional URL to server. Default value is http://localhost:9000 -->
-<sonar.host.url>
-http://localhost:9000
-</sonar.host.url>
-</properties>
-	
-	</profile>
+		<profile>
+			<id>sonar</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+			<!-- Optional URL to server. Default value is http://localhost:9000 -->
+				<sonar.host.url>
+				http://localhost:9000
+				</sonar.host.url>
+			</properties>
+		</profile>
 	</profiles>
 	
  <repositories>
