@@ -10,6 +10,7 @@ import com.virtusa.traderapi.services.BankService;
 
 @Component
 public class BankMutationResolver implements GraphQLMutationResolver{
+
 	@Autowired
 	private BankService bankService;
 	
@@ -19,6 +20,10 @@ public class BankMutationResolver implements GraphQLMutationResolver{
 	
 	public Bank updateBank(long bankId,String address) {
 		return this.bankService.updateBank(bankId, address);
+	}
+
+	public Boolean deleteBank(long bankId) {
+		return this.bankService.deleteBankById(bankId);
 	}
 
 }

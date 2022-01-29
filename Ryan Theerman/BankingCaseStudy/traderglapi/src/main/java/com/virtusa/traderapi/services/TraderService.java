@@ -1,8 +1,14 @@
 package com.virtusa.traderapi.services;
 
+import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.List;
 
+import com.virtusa.traderapi.models.FullName;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import com.virtusa.traderapi.models.Bank;
@@ -30,7 +36,7 @@ public class TraderService {
 		 return trader;
 		 
 		}
-	
+	@Cacheable(value="Trader")
 	//list all the traders
 	
 	public List<Trader> getAllTraders(){
@@ -38,34 +44,43 @@ public class TraderService {
 	}
 	
 	//list trader by Id
-	
+	@Cacheable(value="Trader", key="#traderId")
 	public Trader getTraderById(long traderId) {
 		return this.traderRepo.findById(traderId).orElse(null);
 	}
 	
 	//delete
-
+	@CacheEvict(value="Trader", key="#traderId")
 	public boolean deleteTraderById(long traderId) {
 		boolean status=false;
+		if(getTraderById(traderId).getBank()!=null) {
+			updateBank(getTraderById(traderId).getBank().getBankId());
+		}
 		this.traderRepo.deleteById(traderId);
 		if(this.getTraderById(traderId)==null)
 			status=true;
 		return status;
 	}
-	
+	@CachePut(value="Trader", key="#traderId")
 	//update
-	
-public List<Trader> updateBank(long bankId) {
-
+	public List<Trader> updateBank(long bankId) {
 		Bank bank=this.bankService.getBankById(bankId);
-
 		List<Trader> traderList=this.traderRepo.findByBank(bank);
-
 	    for(Trader trader:traderList) {
 	    	trader.setBank(null);
 	    	this.traderRepo.save(trader);
 	    }
-
 		return traderList;
 	}
+	@CachePut(value="Trader", key="#traderId")
+	public Trader updateTrader(long traderId, String email) {
+
+		Trader trader=this.getTraderById(traderId);
+		if(trader!=null) {
+			trader.setEmail(email);
+		}
+		return this.traderRepo.save(trader);
+
+	}
+
 }

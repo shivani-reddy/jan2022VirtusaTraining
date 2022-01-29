@@ -44,9 +44,9 @@ public class CurrencyController {
     }
 
     //put
-    @PutMapping(value="/",params = "version=1.0")
-    public ResponseEntity<?> updateCurrency(@RequestBody Currency currency){
-        Currency currencyObj=this.currencyService.updateCurrency(currency);
+    @PutMapping(value="/{currencyId}/{tradableFlag}",params = "version=1.0")
+    public ResponseEntity<?> updateCurrency(@PathVariable("currencyId") long currencyId, @PathVariable("tradableFlag") int tradableFlag){
+        Currency currencyObj=this.currencyService.updateCurrency(currencyId, tradableFlag);
         if(currencyObj!=null)
             return ResponseEntity.status(HttpStatus.ACCEPTED).body(currencyObj);
         else

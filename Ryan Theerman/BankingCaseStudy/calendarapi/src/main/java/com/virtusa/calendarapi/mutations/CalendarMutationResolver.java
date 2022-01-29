@@ -22,12 +22,8 @@ public class CalendarMutationResolver implements GraphQLMutationResolver{
 	}
 
 	//update
-	public Calendar updateHoliday(long holidayId,
-								   String event,
-								   String category,
-								   String dateHoliday,
-								   String countryCode) {
-		return this.calendarService.updateHoliday(holidayId, event, category, dateHoliday, countryCode);
+	public Calendar updateHoliday(long holidayId, String category) {
+		return this.calendarService.updateHoliday(holidayId, category);
 	}
 
 	//delete

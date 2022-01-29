@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDate;
 
 @Data
@@ -14,7 +15,7 @@ import java.time.LocalDate;
 @Table(name = "Calendar")
 @AllArgsConstructor
 @NoArgsConstructor
-public class Calendar {
+public class Calendar implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
