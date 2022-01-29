@@ -1,10 +1,7 @@
 package com.virtusa.traderapi.services;
 
-import java.io.Serializable;
-import java.time.LocalDate;
 import java.util.List;
 
-import com.virtusa.traderapi.models.FullName;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
@@ -13,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 import com.virtusa.traderapi.models.Bank;
 import com.virtusa.traderapi.models.Trader;
-import com.virtusa.traderapi.repositories.BankRepo;
 import com.virtusa.traderapi.repositories.TraderRepo;
 
 @Service
@@ -34,11 +30,10 @@ public class TraderService {
 			 trader.setBank(null);
 		 this.traderRepo.save(trader);
 		 return trader;
-		 
 		}
-	@Cacheable(value="Trader")
+
 	//list all the traders
-	
+	@Cacheable(value="Trader")
 	public List<Trader> getAllTraders(){
 		return this.traderRepo.findAll();
 	}
