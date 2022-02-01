@@ -1,5 +1,9 @@
 package com.virtusa.pocstructures;
 
+import com.virtusa.pocstructures.factory.Car;
+import com.virtusa.pocstructures.factory.Factory;
+import com.virtusa.pocstructures.factory.Moped;
+import com.virtusa.pocstructures.factory.Motorcycle;
 import com.virtusa.pocstructures.proxy.Proxy;
 import com.virtusa.pocstructures.singleton.Singleton;
 import org.springframework.boot.SpringApplication;
@@ -18,6 +22,21 @@ public class PocStructuresApplication {
 		proxy.process();
 		//We will run it again, to showcase how Proxy is using a single instance of the Expensive Object it represents to perform its operations.
 		proxy.process();
+
+		//FACTORY
+
+		//This is a Factory
+		//It will be used to construct objects of different classes.
+		Factory factory = new Factory();
+
+		//By using this Factory object, we can hide important information used to construct the resulting object
+		Car car = (Car) factory.getVehicle("Car");
+		Motorcycle motorcycle = (Motorcycle) factory.getVehicle("Motorcycle");
+		Moped moped = (Moped) factory.getVehicle("Moped");
+
+		System.out.println(car.build());
+		System.out.println(moped.build());
+		System.out.println(motorcycle.build());
 
 		//SINGLETON
 
