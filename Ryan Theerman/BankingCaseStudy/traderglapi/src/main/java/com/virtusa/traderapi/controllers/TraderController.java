@@ -4,7 +4,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,9 +21,14 @@ import com.virtusa.traderapi.services.TraderService;
 
 @RestController
 @RequestMapping("/traders")
+@RefreshScope
+@Slf4j
 public class TraderController {
     @Autowired
     private TraderService traderService;
+
+    @Value(("${newmessage}"))
+    private String message;
 
     //post
     @PostMapping(value="/{bankId}",params = "version=1.0")
@@ -36,6 +44,7 @@ public class TraderController {
     //get
     @GetMapping(value="/",params = "version=1.0")
     public List<Trader> getAllTraders(){
+        log.info("Message: " + message);
         return this.traderService.getAllTraders();
     }
 
