@@ -26,7 +26,6 @@ input FullNameInput {
      firstName: String
      lastName: String
      middleName: String
-
 }
 
 input BankTraderInput {
@@ -41,6 +40,6 @@ extend type Query {
 extend type Mutation {
     createTrader(traderInput:TraderInput):Trader
     updateTrader(traderId:ID,email:String):Trader
-    deleteTrader(traderId:Long):Boolean
+    deleteTrader(traderId:ID):Boolean
 }
 
