@@ -22,19 +22,19 @@ public class CustomerService {
         this.customerRepo.save(customer);
         return customer;
     }
-    @Cacheable(value="Customer")
+//    @Cacheable(value="Customer")
     //list all customers
     public List<Customer> getAllCustomers() {
         return this.customerRepo.findAll();
     }
 
-    @Cacheable(value="Customer", key="#customerId")
+//    @Cacheable(value="Customer", key="#customerId")
     //list customer by id
     public Customer getCustomerById(long customerId) {
         return this.customerRepo.findById(customerId).orElse(null);
     }
 
-    @CacheEvict(value="Customer", key="#customerId")
+//    @CacheEvict(value="Customer", key="#customerId")
     //delete
     public boolean deleteCustomerById(long customerId) {
         boolean status = false;
@@ -45,7 +45,7 @@ public class CustomerService {
         return status;
     }
 
-    @CachePut(value="Customer", key="#customerId")
+//    @CachePut(value="Customer", key="#customerId")
     //update
     public Customer updateCustomer(long customerId, String customerEmail) {
 
@@ -56,7 +56,7 @@ public class CustomerService {
         return this.customerRepo.save(customer);
     }
 
-    @CacheEvict(value="Customer", key="#customerId")
+//    @CacheEvict(value="Customer", key="#customerId")
     public Boolean deleteCustomer(Long customerId) {
         Customer customer=this.getCustomerById(customerId);
         if(customer!=null) {

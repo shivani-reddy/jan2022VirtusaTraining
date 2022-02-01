@@ -33,19 +33,19 @@ public class TraderService {
 		}
 
 	//list all the traders
-	@Cacheable(value="Trader")
+	//@Cacheable(value="Trader")
 	public List<Trader> getAllTraders(){
 		return this.traderRepo.findAll();
 	}
 	
 	//list trader by Id
-	@Cacheable(value="Trader", key="#traderId")
+	//@Cacheable(value="Trader", key="#traderId")
 	public Trader getTraderById(long traderId) {
 		return this.traderRepo.findById(traderId).orElse(null);
 	}
 	
 	//delete
-	@CacheEvict(value="Trader", key="#traderId")
+	//@CacheEvict(value="Trader", key="#traderId")
 	public boolean deleteTraderById(long traderId) {
 		boolean status=false;
 		if(getTraderById(traderId).getBank()!=null) {
@@ -56,7 +56,7 @@ public class TraderService {
 			status=true;
 		return status;
 	}
-	@CachePut(value="Trader", key="#traderId")
+	//@CachePut(value="Trader", key="#traderId")
 	//update
 	public List<Trader> updateBank(long bankId) {
 		Bank bank=this.bankService.getBankById(bankId);
@@ -67,7 +67,7 @@ public class TraderService {
 	    }
 		return traderList;
 	}
-	@CachePut(value="Trader", key="#traderId")
+	//@CachePut(value="Trader", key="#traderId")
 	public Trader updateTrader(long traderId, String email) {
 
 		Trader trader=this.getTraderById(traderId);
