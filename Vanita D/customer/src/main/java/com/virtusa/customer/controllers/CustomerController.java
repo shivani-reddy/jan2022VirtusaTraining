@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -27,6 +28,7 @@ import com.virtusa.customer.services.CustomerService;
 
 @RestController
 @RequestMapping("/customers")
+@RefreshScope
 public class CustomerController {
 	@Autowired
 	private CustomerService cService;

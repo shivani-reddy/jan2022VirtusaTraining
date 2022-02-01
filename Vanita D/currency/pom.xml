@@ -91,17 +91,39 @@
 		    <artifactId>guava</artifactId>
 		    <version>19.0</version>
 		</dependency>
-		<!-- thymeleaf Depeendency-->
+		<!--  thymeleaf Depeendency
 		<dependency>
          <groupId>org.springframework.boot</groupId>
          <artifactId>spring-boot-starter-thymeleaf</artifactId>
-      </dependency>
+      </dependency>-->
       <!-- swiggly dependency-->
       <dependency>
 			    <groupId>com.github.bohnman</groupId>
 			    <artifactId>squiggly-filter-jackson</artifactId>
 			    <version>1.3.18</version>
 			</dependency>
+			<!-- graphql and swiqlly depnecy together then we have to add antlr dependency -->
+		<dependency>
+            <groupId>com.graphql-java</groupId>
+            <artifactId>graphql-spring-boot-starter</artifactId>
+            <version>5.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.graphql-java</groupId>
+            <artifactId>graphql-java-tools</artifactId>
+            <version>5.2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.graphql-java</groupId>
+            <artifactId>graphiql-spring-boot-starter</artifactId>
+            <version>5.0.2</version>
+        </dependency>
+         <dependency>
+	        <groupId>org.antlr</groupId>
+			<artifactId>antlr4-runtime</artifactId>
+			<version>4.7.1</version>
+			<scope>compile</scope>
+		</dependency>
 			  <!--redis sb 2.3.4 -->
         <dependency>
 	    <groupId>org.springframework.boot</groupId>

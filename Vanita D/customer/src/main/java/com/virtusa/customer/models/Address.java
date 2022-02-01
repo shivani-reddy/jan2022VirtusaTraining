@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Address implements Serializable{
+public class Address {
 	
 	@Column(name="Road_Name",length = 50,nullable = false)
 	private String roadName;
