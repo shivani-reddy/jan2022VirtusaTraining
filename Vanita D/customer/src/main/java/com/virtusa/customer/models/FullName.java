@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Embeddable
 @AllArgsConstructor
 @NoArgsConstructor
-public class FullName implements Serializable{
+public class FullName {
 	
 	@Column(name="First_Name",length = 50,nullable = false)
 	private String firstName;

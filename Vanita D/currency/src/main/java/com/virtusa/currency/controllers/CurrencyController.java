@@ -50,8 +50,8 @@ public class CurrencyController {
 	//get with id
 	
 	@GetMapping(value="/{currencyId}",params = "version=1.0")
-	public ResponseEntity<?> getCurrencyById(@PathVariable("bankId") long bankId){
-		Currency currencyObj=this.cService.getCurrencyById(bankId);
+	public ResponseEntity<?> getCurrencyById(@PathVariable("currencyId") long currencyId){
+		Currency currencyObj=this.cService.getCurrencyById(currencyId);
 		if(currencyObj!=null)
 			return ResponseEntity.status(HttpStatus.ACCEPTED).body(currencyObj);
 		else

@@ -24,19 +24,19 @@ public class CustomerService {
 	}
 	
 	//list all the customer
-	@Cacheable(value="Customer")
+//	@Cacheable(value="Customer")
 	public List<Customer> getAllCustomers(){
 		return this.cRepo.findAll();
 	}
 	
 	//list customer by Id
-	@Cacheable(value="Customer", key="#customerId")
+//	@Cacheable(value="Customer", key="#customerId")
 	public Customer getCustomerById(long customerId) {
 		return this.cRepo.findById(customerId).orElse(null);
 	}
 	
 	//delete
-	@CacheEvict(value="Customer", key="#customerId")
+//	@CacheEvict(value="Customer", key="#customerId")
 	public boolean deleteCustomerById(long customerId) {
 		boolean status=false;
 		this.cRepo.deleteById(customerId);
@@ -46,7 +46,7 @@ public class CustomerService {
 	}
 	
 	//update
-	@CachePut(value="Customer", key="#customerId")
+//	@CachePut(value="Customer", key="#customerId")
 	public Customer updateCustomer(Long customerId, String phonenumber) {
 		Customer customer=this.getCustomerById(customerId);
 		if(customer!=null) {
