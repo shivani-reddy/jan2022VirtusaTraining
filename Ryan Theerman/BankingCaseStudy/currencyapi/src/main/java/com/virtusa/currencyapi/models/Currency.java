@@ -25,13 +25,13 @@ public class Currency implements Serializable {
     private String country;
     //CURRENCY SYMBOL?
     @Column(name = "Symbol")
-    private String currencySymbol;
+    private Blob currencySymbol;
     @Column(name="Tradable_Flag",nullable = false)
     private int tradableFlag;
     @Column(name = "Description")
     private String description;
 
-    public Currency(String country, String currencySymbol, int tradableFlag, String description) {
+    public Currency(String country, Blob currencySymbol, int tradableFlag, String description) {
         this.country = country;
         this.currencySymbol = currencySymbol;
         this.tradableFlag = tradableFlag;

@@ -20,7 +20,7 @@ type Query {
 
 type Mutation {
     createCurrency(currencyInput:CurrencyInput):Currency
-    updateCurrency(currencyId:Long,tradableFlag:Int):Currency
-    deleteCurrency(currencyId:Long):Boolean
+    updateCurrency(currencyId:ID,tradableFlag:Int):Currency
+    deleteCurrency(currencyId:ID):Boolean
 
 }
