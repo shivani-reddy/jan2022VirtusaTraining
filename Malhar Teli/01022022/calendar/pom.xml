@@ -9,19 +9,24 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>calendar</artifactId>
+	<artifactId>currency</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>calendar</name>
-	<description>API for Calendar database</description>
+	<name>currency</name>
+	<description>API for Currency database</description>
 	<properties>
 		<java.version>1.8</java.version>
+		<spring-cloud.version>Hoxton.SR6</spring-cloud.version>
+
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-rest-hal-explorer</artifactId>
@@ -42,10 +47,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
+
 		<!-- swagger -->
 		<dependency>
 			<groupId>io.springfox</groupId>
@@ -119,7 +121,9 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-stream-rabbit</artifactId>
 		</dependency>
+
 	</dependencies>
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -137,7 +141,7 @@
 		<repository>
 			<id>jcenter-snapshots</id>
 			<name>jcenter</name>
-			<url>https://oss.jfrog.org/artifactory/oss-snapshot-local/</url>
+			<url>http://oss.jfrog.org/artifactory/oss-snapshot-local/</url>
 		</repository>
 	</repositories>
 	<build>
@@ -148,6 +152,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
 
 </project>
