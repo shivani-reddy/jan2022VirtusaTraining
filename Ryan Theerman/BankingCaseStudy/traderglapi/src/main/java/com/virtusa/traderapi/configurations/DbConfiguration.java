@@ -12,7 +12,7 @@ import javax.sql.DataSource;
 @EnableConfigurationProperties(VaultConfiguration.class)
 public class DbConfiguration {
 
-    @Value(("${db_url}"))
+    @Value(("${db_url_1}"))
     private String dbUrl;
     @Value("${db_driver}")
     private String driver;
