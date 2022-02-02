@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="calendar/src/main/java"/>
+	<classpathentry kind="src" path="calendar/src/test/java"/>
+	<classpathentry kind="src" path="currency/src/main/java"/>
+	<classpathentry kind="src" path="currency/src/test/java"/>
+	<classpathentry kind="src" path="customer/src/main/java"/>
+	<classpathentry kind="src" path="customer/src/test/java"/>
+	<classpathentry kind="lib" path="calendar/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="calendar/target/calendar-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="currency/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="currency/target/currency-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="customer/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="customer/target/customer-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="output" path="calendar/target/classes"/>
+</classpath>
