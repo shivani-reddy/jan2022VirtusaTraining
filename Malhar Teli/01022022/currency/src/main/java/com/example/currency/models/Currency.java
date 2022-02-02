@@ -1,11 +1,15 @@
 package com.example.currency.models;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Data
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name="Currency")
 public class Currency {
     //Currency_Code

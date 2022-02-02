@@ -24,7 +24,8 @@ public class CurrencyController {
 
     //Post
     @PostMapping(value = "/", params = "version=1.0")
-    public ResponseEntity<?> addCurrency(@RequestBody Currency currency){
+    public ResponseEntity<?> addCurrency(@RequestBody Currency currencyBody){
+        Currency currency = new Currency(currencyBody.getCurrencyCode(), currencyBody.getCountry(), null, currencyBody.getTradableFlag(), currencyBody.getDescription());
         Currency currencyObj = this.currencyService.addCurrency(currency);
         if (currencyObj!=null)
             return ResponseEntity.status(HttpStatus.ACCEPTED).body(currencyObj);
