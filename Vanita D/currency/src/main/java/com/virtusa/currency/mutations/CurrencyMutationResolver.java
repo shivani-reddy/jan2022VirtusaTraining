@@ -20,14 +20,19 @@ public class CurrencyMutationResolver implements GraphQLMutationResolver{
 
 
 	public Currency createCurrency(CurrencyInput currencyInput) {
-		String inputString = currencyInput.getSymbol();
-	    Charset charset = Charset.forName("ASCII");
+//		String inputString = currencyInput.getSymbol();
+//	    Charset charset = Charset.forName("ASCII");
 				
+//		return this.currencyService.addCurrency(new Currency(0,
+//				currencyInput.getCountry(),
+//				currencyInput.getDescription(),
+//				Long.parseLong(currencyInput.getTradeable_flag()),
+//				inputString.getBytes(charset)));
 		return this.currencyService.addCurrency(new Currency(0,
 				currencyInput.getCountry(),
 				currencyInput.getDescription(),
 				Long.parseLong(currencyInput.getTradeable_flag()),
-				inputString.getBytes(charset)));
+				currencyInput.getSymbol()));
 	}
 //	type Mutation {
 //		   

@@ -45,5 +45,5 @@ public class Currency implements Serializable {
 	@Lob 
 	//it should return type byte[] , for now I am returning string
     @Column(name = "Symbol", length = Integer.MAX_VALUE, nullable = true)
-    private byte[] symbol;
+    private String symbol;
 }
