@@ -1,8 +1,3 @@
-schema {
-	query: Query
-	mutation: Mutation
-}
-
 type Trader {
 
  traderId: ID!
@@ -23,11 +18,27 @@ middleName: String
 }
 
 input TraderInput {
-	name: FullName
+
+	traderId: ID!
+	name: FullNameInput	
 	tradingLimit: Long
-	dob: String
 	email: String
-	bank: Bank
+	dob: String
+	bank:BankTraderInput
+}
+
+input FullNameInput {
+     firstName: String
+     lastName: String
+     middleName: String
+
+}
+
+input BankTraderInput {
+
+    bankId: ID!
+  
+
 }
 
 extend type Query {
@@ -37,5 +48,5 @@ extend type Query {
 
 extend type Mutation {
 	createTrader(traderInput:TraderInput):Trader
-		updateBank(bankId:ID):List<Trader>
+        
 }

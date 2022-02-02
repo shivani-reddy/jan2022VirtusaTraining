@@ -25,24 +25,8 @@ public class CustomerMutationResolver implements GraphQLMutationResolver{
 				customerInput.getDob()));
 	}
 
-	public Customer updateCustomer(long customerId,
-								   FullName customerName,
-								   String customerAddress,
-								   String customerCountry,
-								   String customerZip,
-								   String customerState,
-								   String customerPhone,
-								   String customerEmail,
-								   String dob) {
-		return this.customerService.updateCustomer(customerId,
-				customerName,
-				customerAddress,
-				customerCountry,
-				customerZip,
-				customerState,
-				customerPhone,
-				customerEmail,
-				dob);
+	public Customer updateCustomer(long customerId, String customerEmail) {
+		return this.customerService.updateCustomer(customerId, customerEmail);
 	}
 
 	public Boolean deleteCustomer(Long customerId) {

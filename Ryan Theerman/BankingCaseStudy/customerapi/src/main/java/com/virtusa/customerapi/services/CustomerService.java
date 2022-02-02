@@ -4,6 +4,9 @@ import com.virtusa.customerapi.models.Customer;
 import com.virtusa.customerapi.models.FullName;
 import com.virtusa.customerapi.repositories.CustomerRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 
@@ -19,17 +22,19 @@ public class CustomerService {
         this.customerRepo.save(customer);
         return customer;
     }
-
-    //list all the customers
+//    @Cacheable(value="Customer")
+    //list all customers
     public List<Customer> getAllCustomers() {
         return this.customerRepo.findAll();
     }
 
+//    @Cacheable(value="Customer", key="#customerId")
     //list customer by id
     public Customer getCustomerById(long customerId) {
         return this.customerRepo.findById(customerId).orElse(null);
     }
 
+//    @CacheEvict(value="Customer", key="#customerId")
     //delete
     public boolean deleteCustomerById(long customerId) {
         boolean status = false;
@@ -40,31 +45,18 @@ public class CustomerService {
         return status;
     }
 
+//    @CachePut(value="Customer", key="#customerId")
     //update
-    public Customer updateCustomer(long customerId,
-                                   FullName customerName,
-                                   String customerAddress,
-                                   String customerCountry,
-                                   String customerZip,
-                                   String customerState,
-                                   String customerPhone,
-                                   String customerEmail,
-                                   String dob) {
+    public Customer updateCustomer(long customerId, String customerEmail) {
 
         Customer customer=this.getCustomerById(customerId);
         if(customer!=null) {
-            customer.setCustomerName(customerName);
-            customer.setCustomerAddress(customerAddress);
-            customer.setCustomerCountry(customerCountry);
-            customer.setCustomerZip(customerZip);
-            customer.setCustomerState(customerState);
-            customer.setCustomerPhone(customerPhone);
             customer.setCustomerEmail(customerEmail);
-            customer.setDob(dob);
         }
         return this.customerRepo.save(customer);
     }
 
+//    @CacheEvict(value="Customer", key="#customerId")
     public Boolean deleteCustomer(Long customerId) {
         Customer customer=this.getCustomerById(customerId);
         if(customer!=null) {
