@@ -1,6 +1,5 @@
 package com.virtusa.traderapi.services;
 
-import java.io.Serializable;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,19 +23,19 @@ public class BankService {
 	}
 	
 	// list all banks
-	@Cacheable(value="Bank")
+	//@Cacheable(value="Bank")
 	public List<Bank> getAllBanks(){
 		return this.bankRepo.findAll();
 	}
 	
 	// list bank by id
-	@Cacheable(value="Bank", key="#bankId")
+	//@Cacheable(value="Bank", key="#bankId")
 	public Bank getBankById(long bankId) {
 		return this.bankRepo.findById(bankId).orElse(null);
 	}
 
 	// update
-	@CachePut(value="Bank", key="#bankId")
+	//@CachePut(value="Bank", key="#bankId")
 	public Bank updateBank(long bankId,String address) {
 		Bank bank=this.getBankById(bankId);
 		if(bank!=null) {
@@ -46,7 +45,7 @@ public class BankService {
 	}
 
 	// delete
-	@CacheEvict(value="Bank", key="#bankId")
+	//@CacheEvict(value="Bank", key="#bankId")
 	public boolean deleteBankById(long bankId) {
 		boolean status=false;
 		this.bankRepo.deleteById(bankId);

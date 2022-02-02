@@ -3,6 +3,8 @@ package com.virtusa.currency.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -16,13 +18,19 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.virtusa.currency.models.Currency;
 import com.virtusa.currency.services.CurrencyService;
+import com.virtusa.currency.controllers.CurrencyController;
+
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequestMapping("/currency")
+@RefreshScope
+@Slf4j
 public class CurrencyController {
 	@Autowired
 	private CurrencyService currencyService;
-	
+	@Value("${newmessage}")
+	private String message;
 
 	@PostMapping(value="/",params = "version=1.0")
 	public ResponseEntity<?> addCurrency(@RequestBody Currency currency) {
@@ -35,6 +43,7 @@ public class CurrencyController {
 	
 	@GetMapping(value="/",params = "version=1.0")
 	public List<Currency> getAllCurrency() {
+		log.info("Message"+message);
 		return this.currencyService.getAllCurrency();
 	}
 	
