@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -24,11 +26,18 @@ import com.virtusa.calender.models.Calender;
 import com.virtusa.calender.services.CalenderService;
 
 
+import lombok.extern.slf4j.Slf4j;
+
+
 @RestController
 @RequestMapping("/calenders")
+@RefreshScope
+@Slf4j
 public class CalenderController {
 	@Autowired
 	private CalenderService cService;
+	@Value("${newmessage}")
+	private String message;
 	
 	//post
 	@PostMapping(value = "/", params = "version=1.0")
@@ -42,6 +51,8 @@ public class CalenderController {
 	//get//why are we not returning responseentity?
 	@GetMapping(value="/",params = "version=1.0")
 	public List<Calender> getAllCalender(){
+		log.info("Message"+message);
+		
 		return this.cService.getAllCalenders();
 	}
 	

@@ -59,6 +59,7 @@ public class CustomerController {
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("customer Not Found");
 		
 	}
+	
 	@PutMapping(value="/{customerId}/{phonenumber}",params = "version=1.0")
 	public ResponseEntity<?> updateCustomer(@PathVariable("customerId") long customerId,@PathVariable("phonenumber") String phonenumber){
 		Customer customerObj = this.cService.updateCustomer(customerId, phonenumber);
@@ -69,9 +70,7 @@ public class CustomerController {
 		
 	}
 	
-	
 	//delete
-	
 	@DeleteMapping(value="/{customerId}",params = "version=1.0")
 	public ResponseEntity<?> deleteCustomerById(@PathVariable("customerId") long customerId){
 	
