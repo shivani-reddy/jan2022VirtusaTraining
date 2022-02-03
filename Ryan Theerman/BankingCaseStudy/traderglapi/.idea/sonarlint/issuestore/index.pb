@@ -35,3 +35,9 @@ f
 6src/main/java/com/virtusa/traderapi/models/Trader.java,e\9\e9feec41b5a8e3d35ae77388d902789bf8c8ff77
 u
 Esrc/main/java/com/virtusa/traderapi/controllers/TraderController.java,d\e\de80970359094011470848a652f977180feecfb6
+w
+Gsrc/main/java/com/virtusa/traderapi/configurations/DbConfiguration.java,b\a\baa9556b96531f61131f584a51ab86fd8d911738
+z
+Jsrc/main/java/com/virtusa/traderapi/configurations/VaultConfiguration.java,d\7\d7df49dc9a0e37df4dedc7f24f6d0d030972ccc4
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
