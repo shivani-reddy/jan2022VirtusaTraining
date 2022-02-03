@@ -1,9 +1,13 @@
-package com.virtusa.calender.models;
+package com.virtusa.customer.models;
 
 
+
+
+import java.io.Serializable;
 import java.time.LocalDate;
 
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,23 +24,31 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Entity
+@Table(name = "Customer")
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="Calender")
-public class Calender {
+public class Customer {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@ApiModelProperty(hidden=true)
-	@Column(name="Holiday_Id")
-	private long holidayId;
+	@Column(name="Customer_Id")
+	private long customerId;
 	
-	@Column(name="Event", length = 50,nullable = false)
-	private String event;
+	@Embedded
+	private FullName name;
+	@Embedded
+	private Address address;
 	
-	@Column(name="Category", length = 50,nullable = false)
-	private String category;
+	@Column(name="Phone_Number", length = 50,nullable = false)
+	private String phoneNumber;
+	
+	@Column(name="Email", length = 50,nullable = false)
+	private String email;
 	
 	@DateTimeFormat(iso = ISO.DATE)
 	@Column(name="DOB")
-	private LocalDate holidayDate;
+	private LocalDate dob;
+	
+
 }
