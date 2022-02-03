@@ -1,0 +1,9 @@
+1.SOLID Principle and implement relevant usecases 
+
+create poc @Configuration,@Primary,@Bean and @Lazy
+
+Multi Module Project
+
+Super POM , Effective POM and Optional POM
+
+Surefire Reports
