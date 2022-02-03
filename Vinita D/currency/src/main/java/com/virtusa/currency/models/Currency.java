@@ -22,7 +22,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "Currency")
 @NoArgsConstructor
 @AllArgsConstructor
-public class Currency implements Serializable {
+public class Currency  {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@ApiModelProperty(hidden=true)

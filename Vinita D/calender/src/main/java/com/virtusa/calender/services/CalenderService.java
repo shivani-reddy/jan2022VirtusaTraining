@@ -24,19 +24,19 @@ public class CalenderService {
 	}
 	
 	//list all the calender
-	@Cacheable(value="Calender")
+	//@Cacheable(value="Calender")
 	public List<Calender> getAllCalenders(){
 		return this.cRepo.findAll();
 	}
 	
-	@Cacheable(value="Calender", key="#calenderId")
+	//@Cacheable(value="Calender", key="#calenderId")
 	public Calender getCalenderById(long calenderId) {
 		System.out.println("caching is not used");
 		return this.cRepo.findById(calenderId).orElse(null);
 	}
 	
 	//delete
-	@CacheEvict(value="Calender", key="#calenderId")
+	//@CacheEvict(value="Calender", key="#calenderId")
 	public boolean deleteCalenderById(long calenderId) {
 		boolean status=false;
 		this.cRepo.deleteById(calenderId);
@@ -46,7 +46,7 @@ public class CalenderService {
 	}
 	
 	//update
-	@CachePut(value="Calender", key="#calenderId")
+	//@CachePut(value="Calender", key="#calenderId")
 	public Calender updateCalender(Long calenderId, String category) {
 		Calender calender=this.getCalenderById(calenderId);
 		if(calender!=null) {
