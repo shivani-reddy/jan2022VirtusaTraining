@@ -1,0 +1,5 @@
+com\virtusa\controllers\HomeController.class
+com\virtusa\WebSecurityConfig.class
+com\virtusa\SecurityWebApplicationInitializer.class
+com\virtusa\AppConfig.class
+com\virtusa\MvcWebApplicationInitializer.class
