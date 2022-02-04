@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CurrencyInput implements Serializable {
+public class CurrencyInput  {
 	
 	private String country;
 	

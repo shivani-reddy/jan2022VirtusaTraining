@@ -1,6 +1,6 @@
 package com.virtusa.calender.models;
 
-import java.io.Serializable;
+
 import java.time.LocalDate;
 
 import javax.persistence.Column;
@@ -23,7 +23,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="Calender")
-public class Calender implements Serializable{
+public class Calender {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@ApiModelProperty(hidden=true)

@@ -1,2 +1,2 @@
-# Vanita's Folder
-This is Vanita's Folder. 
+# Vinita's Folder
+This is Vinita's Folder. 
