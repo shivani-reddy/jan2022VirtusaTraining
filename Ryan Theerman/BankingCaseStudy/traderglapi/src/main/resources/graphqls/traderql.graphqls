@@ -13,8 +13,33 @@ type FullName {
     middleName: String
 }
 
+input TraderInput {
+	traderId: ID!
+	name: FullNameInput
+	tradingLimit: Long
+	email: String
+	dob: String
+	bank:BankTraderInput
+}
+
+input FullNameInput {
+     firstName: String
+     lastName: String
+     middleName: String
+}
+
+input BankTraderInput {
+    bankId: ID!
+}
+
 extend type Query {
 	findAllTraders:[Trader]
 	findTrader(traderId: ID):Trader
+}
+
+extend type Mutation {
+    createTrader(traderInput:TraderInput):Trader
+    updateTrader(traderId:ID,email:String):Trader
+    deleteTrader(traderId:ID):Boolean
 }
 

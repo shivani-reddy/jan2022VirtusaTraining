@@ -18,7 +18,7 @@ input CustomerInput {
     customerState: String
     customerPhone: String
     customerEmail: String
-    dob: String!
+    dob: String
 }
 
 type FullName {
@@ -40,6 +40,6 @@ type Query {
 
 type Mutation {
     createCustomer(customerInput:CustomerInput):Customer
-    updateCustomer(customerId:ID,customerName:FullName,customerAddress:String,customerCountry:String,customerZip:String,customerState:String,customerPhone:String,customerEmail:String,dob:String):Customer
-    deleteCustomer(customerId:Long):Boolean
+    updateCustomer(customerId:ID,customerEmail:String):Customer
+    deleteCustomer(customerId:ID):Boolean
 }

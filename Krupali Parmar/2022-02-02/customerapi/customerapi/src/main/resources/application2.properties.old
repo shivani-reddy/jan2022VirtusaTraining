@@ -1,0 +1,41 @@
+server.port=7070
+
+#mysql
+
+##REMOVED AFTER VAULT IMPLEMENTATION
+##spring.datasource.url=jdbc:mysql://localhost:3306/customerdb?useSSL=true
+
+##ADDED AFTER VAULT IMPLEMENTATION
+db_url = jdbc:mysql://localhost:3306/customerdb?useSSL=true
+
+#-------------------------------------------------------------------------------
+
+##REMOVED AFTER VAULT IMPLEMENTATION # spring.datasource.username=root
+##REMOVED AFTER VAULT IMPLEMENTATION # spring.datasource.password=1234
+##REMOVED AFTER VAULT IMPLEMENTATION # spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+
+##ADDED AFTER VAULT IMPLEMENTATION
+db_driver = com.mysql.jdbc.Driver
+
+#-------------------------------------------------------------------------------
+
+## JPA (JpaBaseConfiguration, HibernateJpaAutoConfiguration)
+spring.jpa.generate-ddl=true
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.database=default
+spring.jpa.show-sql=true
+
+## DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+spring.datasource.continue-on-error=false
+spring.datasource.generate-unique-name=false
+spring.jpa.hibernate.naming.implicit-strategy=org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+spring.jackson.serialization.fail-on-empty-beans=false
+
+graphql.tools.schema-location-pattern: **/*.graphqls
+
+
+## Redis specific configurations
+spring.redis.host=localhost
+spring.redis.port=6379
+spring.redis.password= 

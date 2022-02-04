@@ -20,6 +20,6 @@ type Query {
 
 type Mutation {
     createHoliday(calendarInput:CalendarInput):Calendar
-    updateHoliday(holidayId:ID,event:String,category:String,dateHoliday:String,countryCode:String):Calendar
-    deleteHoliday(holidayId:Long):Boolean
+    updateHoliday(holidayId:ID,category:String):Calendar
+    deleteHoliday(holidayId:ID):Boolean
 }

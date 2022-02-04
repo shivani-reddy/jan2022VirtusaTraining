@@ -19,11 +19,15 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
 
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity
 @Table(name = "Trader")
+@AllArgsConstructor
+@NoArgsConstructor
 public class Trader {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,9 +41,9 @@ public class Trader {
 	private long tradingLimit;
 	@Column(name="Email")
 	private String email;
-	//@DateTimeFormat(iso = ISO.DATE)
+	@DateTimeFormat(iso = ISO.DATE)
 	@Column(name="DOB")
-	private String dob;
+	private LocalDate dob;
 	@ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 	@JoinColumn(foreignKey = @ForeignKey(name = "Bank_Id"), name = "Bank_Id" )
 	private Bank bank;

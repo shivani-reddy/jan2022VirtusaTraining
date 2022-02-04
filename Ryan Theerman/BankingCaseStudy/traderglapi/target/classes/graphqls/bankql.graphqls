@@ -16,10 +16,11 @@ input BankInput {
 
 type Query {
 	findAllBanks:[Bank]
-	findBank(bankId: ID):Bank
+	findBank(bankId:ID):Bank
 }
 
 type Mutation {
 	createBank(bankInput:BankInput):Bank
     updateBank(bankId:ID,address:String):Bank
+    deleteBank(bankId:ID):Boolean
 }

@@ -1,15 +1,20 @@
 package com.virtusa.currencyapi.models;
 
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Blob;
 
 @Data
 @Entity
 @Table(name = "Currency")
-public class Currency {
+@AllArgsConstructor
+@NoArgsConstructor
+public class Currency implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,4 +30,11 @@ public class Currency {
     private int tradableFlag;
     @Column(name = "Description")
     private String description;
+
+    public Currency(String country, Blob currencySymbol, int tradableFlag, String description) {
+        this.country = country;
+        this.currencySymbol = currencySymbol;
+        this.tradableFlag = tradableFlag;
+        this.description = description;
+    }
 }
