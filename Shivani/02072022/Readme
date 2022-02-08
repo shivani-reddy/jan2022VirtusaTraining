@@ -1,1 +1,3 @@
-Created a new folder
+Apigateway->pre filter(read user credentials)->validation of user credientials->if yes token is generated or else invalid credetials 
+
+
