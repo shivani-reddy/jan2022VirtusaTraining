@@ -1,3 +1,4 @@
+COMMUNICATIO BETWEEN APIGATWAY AND JWT OVERVIEW
 Apigateway->pre filter(read user credentials)->validation of user credientials->if yes token is generated or else invalid credentials.
 
 
