@@ -5,10 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1114cc47-3a37-4650-a8b1-af24ef0af840" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/models/CurrencyInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/mutations/CurrencyMutationResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/queries/CurrencyQueryResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/currency/src/main/resources/graphqls/currencyql.graphqls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Bayar T/configserver/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bayar T/configserver/.classpath" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Bayar T/configserver/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bayar T/configserver/.project" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Bayar T/configserver/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bayar T/configserver/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
@@ -21,16 +17,6 @@
       <change beforePath="$PROJECT_DIR$/../../Bayar T/traderglapi/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bayar T/traderglapi/.classpath" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Bayar T/traderglapi/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bayar T/traderglapi/.project" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Bayar T/traderglapi/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bayar T/traderglapi/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/currency/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/currency/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/controllers/CurrencyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/controllers/CurrencyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/models/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/models/Currency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/repositories/CurrencyRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/repositories/CurrencyRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/services/CurrencyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/services/CurrencyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/currency/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/currency/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +87,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../02022022" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../08022022" />
     <property name="show.run.dashboard.notification" value="false" />
   </component>
   <component name="RunManager" selected="Spring Boot.CurrencyApplication">
@@ -183,7 +169,7 @@
       <workItem from="1643351129114" duration="896000" />
       <workItem from="1643352045794" duration="50000" />
       <workItem from="1643352214948" duration="79000" />
-      <workItem from="1644349200907" duration="7316000" />
+      <workItem from="1644349200907" duration="7644000" />
     </task>
     <servers />
   </component>
