@@ -5,65 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1114cc47-3a37-4650-a8b1-af24ef0af840" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/calendar/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendar/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendar/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendar/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendar/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendar/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendar/src/main/java/com/example/calendar/CalendarApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendar/src/main/java/com/example/calendar/configurations/SwaggerConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendar/src/main/java/com/example/calendar/controllers/CalendarController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendar/src/main/java/com/example/calendar/models/Calendar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendar/src/main/java/com/example/calendar/models/CalendarInput.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendar/src/main/java/com/example/calendar/models/Country.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendar/src/main/java/com/example/calendar/mutations/CalendarMutationResolver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendar/src/main/java/com/example/calendar/queries/CalenderQueryResolver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendar/src/main/java/com/example/calendar/repositories/CalendarRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendar/src/main/java/com/example/calendar/services/CalendarService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendar/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendar/src/main/resources/calendar.graphqls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendar/src/main/resources/graphqls/calendar.graphqls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendar/src/test/java/com/example/calendar/CustomerApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/currency/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/currency/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/currency/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/currency/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/currency/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/currency/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/CurrencyApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/configurations/SwaggerConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/controllers/CurrencyController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/models/Currency.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/repositories/CurrencyRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/services/CurrencyService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/currency/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/currency/src/test/java/com/example/currency/CustomerApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/example/customer/CustomerApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/example/customer/configurations/SwaggerConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/example/customer/controllers/BankController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/example/customer/controllers/CustomerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/example/customer/controllers/DeskController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/example/customer/models/Address.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/example/customer/models/Bank.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/example/customer/models/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/example/customer/models/Desk.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/example/customer/models/FullName.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/example/customer/repositories/BankRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/example/customer/repositories/CustomerRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/example/customer/repositories/DeskRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/example/customer/services/BankService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/example/customer/services/CustomerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/example/customer/services/DeskService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/resources/graphqls/customerql.graphqls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/test/java/com/example/customer/CustomerApplicationTests.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/models/CurrencyInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/mutations/CurrencyMutationResolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/queries/CurrencyQueryResolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/currency/src/main/resources/graphqls/currencyql.graphqls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bayar T/configserver/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bayar T/configserver/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bayar T/configserver/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bayar T/configserver/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bayar T/configserver/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bayar T/configserver/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bayar T/springcorelab/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bayar T/springcorelab/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bayar T/springcorelab/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bayar T/springcorelab/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bayar T/springcorelab/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bayar T/springcorelab/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bayar T/traderapi/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bayar T/traderapi/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bayar T/traderapi/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bayar T/traderapi/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bayar T/traderapi/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bayar T/traderapi/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bayar T/traderglapi/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bayar T/traderglapi/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bayar T/traderglapi/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bayar T/traderglapi/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bayar T/traderglapi/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bayar T/traderglapi/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/currency/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/currency/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/controllers/CurrencyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/controllers/CurrencyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/models/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/models/Currency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/repositories/CurrencyRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/repositories/CurrencyRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/services/CurrencyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/currency/src/main/java/com/example/currency/services/CurrencyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/currency/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/currency/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +39,13 @@
   </component>
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -84,11 +58,15 @@
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
       <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
         <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
     <option name="myId2Visible">
       <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
@@ -99,10 +77,12 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="Use Maven wrapper" />
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
   </component>
   <component name="ProjectId" id="24JaQYM2MKfqAawwsrn4Lp5A1Zc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -121,15 +101,47 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../02022022" />
+    <property name="show.run.dashboard.notification" value="false" />
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
-      <setting name="path" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
+  <component name="RunManager" selected="Spring Boot.CurrencyApplication">
+    <configuration name="currency [install]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="install" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/currency" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="CalendarApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="calendar" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.calendar.CalendarApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CurrencyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="currency" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.currency.CurrencyApplication" />
+      <option name="VM_PARAMETERS" value="-Dspring.profiles.active=dev" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -147,8 +159,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.CalendarApplication" />
+      <item itemvalue="Spring Boot.CurrencyApplication" />
+      <item itemvalue="Spring Boot.CustomerApplication" />
+      <item itemvalue="Maven.currency [install]" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Maven.currency [install]" />
         <item itemvalue="Spring Boot.CustomerApplication" />
       </list>
     </recent_temporary>
@@ -164,6 +183,7 @@
       <workItem from="1643351129114" duration="896000" />
       <workItem from="1643352045794" duration="50000" />
       <workItem from="1643352214948" duration="79000" />
+      <workItem from="1644349200907" duration="7316000" />
     </task>
     <servers />
   </component>

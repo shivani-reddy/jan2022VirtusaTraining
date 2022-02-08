@@ -33,8 +33,8 @@ public class CurrencyController {
 
     //Get with Id
     @GetMapping(value = "/{currencyId}", params = "version=1.0")
-    public ResponseEntity<?> getCurrencyById(@PathVariable("currencyId") String currencyId){
-        Currency currencyObj = this.currencyService.getCurrencyById(currencyId);
+    public ResponseEntity<?> findCurrencyByCode(@PathVariable("currencyId") String currencyId){
+        Currency currencyObj = this.currencyService.findCurrencyByCode(currencyId);
         if (currencyObj!=null)
             return ResponseEntity.status(HttpStatus.ACCEPTED).body(currencyObj);
         else
