@@ -22,19 +22,19 @@ public class CurrencyService {
         return this.currencyRepo.save(currency);
     }
 
-    @Cacheable(value="Currency")
+//    @Cacheable(value="Currency")
     //list all the currencies
     public List<Currency> getAllCurrencies() {
         return this.currencyRepo.findAll();
     }
 
-    @Cacheable(value="Currency", key="#currencyId")
+//    @Cacheable(value="Currency", key="#currencyId")
     //list currency by id
     public Currency getCurrencyById(long currencyId) {
         return this.currencyRepo.findById(currencyId).orElse(null);
     }
 
-    @CacheEvict(value="Currency", key="#currencyId")
+//    @CacheEvict(value="Currency", key="#currencyId")
     //delete
     public boolean deleteCurrencyById(long currencyId) {
         boolean status = false;
@@ -45,7 +45,7 @@ public class CurrencyService {
         return status;
     }
 
-    @CachePut(value="Currency", key="#currencyId")
+//    @CachePut(value="Currency", key="#currencyId")
     //update
     public Currency updateCurrency(long currencyId, int tradableFlag) {
         Currency currency=this.getCurrencyById(currencyId);

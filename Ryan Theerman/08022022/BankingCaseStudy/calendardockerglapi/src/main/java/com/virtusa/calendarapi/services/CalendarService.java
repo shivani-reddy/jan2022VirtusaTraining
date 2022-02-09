@@ -16,13 +16,13 @@ public class CalendarService {
     @Autowired
     private CalendarRepo calendarRepo;
 
-    @Cacheable(value = "Calendar")
+//    @Cacheable(value = "Calendar")
     //list all holidays
     public List<Calendar> getAllHolidays() {
         return this.calendarRepo.findAll();
     }
 
-    @Cacheable(value="Calendar", key="#calendarId")
+//    @Cacheable(value="Calendar", key="#calendarId")
     //list holiday by id
     public Calendar getHolidayById(long holidayId) {
         return this.calendarRepo.findById(holidayId).orElse(null);
@@ -33,7 +33,7 @@ public class CalendarService {
         return this.calendarRepo.save(calendar);
     }
 
-    @CachePut(value="Calendar", key="#calendarId")
+//    @CachePut(value="Calendar", key="#calendarId")
     //update
     public Calendar updateHoliday(long holidayId, String category) {
         Calendar calendar=this.getHolidayById(holidayId);
@@ -43,7 +43,7 @@ public class CalendarService {
         return this.calendarRepo.save(calendar);
     }
 
-    @CacheEvict(value="Calendar", key="#calendarId")
+//    @CacheEvict(value="Calendar", key="#calendarId")
     //delete
     public boolean deleteHolidayById(long holidayId) {
         Calendar calendar=this.getHolidayById(holidayId);
