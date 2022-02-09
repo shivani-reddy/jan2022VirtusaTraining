@@ -1,0 +1,21 @@
+In this project we have created a docker images , containers of the databases and different microserveries. 
+Following are the docker commands:
+
+--->docker run --name nec-mysql1 -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=currencyapi  -e MYSQL_USER=demo_user -e MYSQL_PASSWORD=demo_pass -d mysql
+This command pulls mysql Orginal image and creates a container with a given name and password parameters.
+
+--->docker exec -it nec-mysql mysql -u root -p
+Prompts with mysql on the cmd and see the database information.
+
+--->docker build -f dockerfile -t customerapp
+we need to add a docker file which contains the name of the jar file of the build application helps build a docker image.
+
+--->docker run -p 7070:7070 --name customerapp-c1 --link nec-mysql:mysql -d customerapp:latest
+creates a container for the image
+
+
+------------------------------------------------------------------------
+Adding in Docker hub
+
+docker tag traderapp:latest eswaribala/vusmsjan2022:traderappv1
+docker push eswaribala/vusmsjan2022:traderappv1
