@@ -1,4 +1,0 @@
-FROM java:8
-EXPOSE 7071
-ADD /target/customerapi-0.0.1-SNAPSHOT.jar customerapi-0.0.1-SNAPSHOT.jar 
-ENTRYPOINT ["java","-jar","customerapi-0.0.1-SNAPSHOT.jar"]
