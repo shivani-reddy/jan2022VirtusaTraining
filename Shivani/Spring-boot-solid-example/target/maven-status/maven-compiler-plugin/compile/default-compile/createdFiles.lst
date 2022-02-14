@@ -1,0 +1,6 @@
+com\solidprinciples\services\notificationService.class
+com\solidpriciples\modals\User.class
+com\solidprinciples\services\ServiceInterface.class
+com\solidprinciples\Repo\repoVeiw.class
+com\solidprinciples\services\emailNotificationService.class
+com\solidprinciples\Spring_boot_solid_example\App.class
